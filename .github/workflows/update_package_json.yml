@@ -10,7 +10,8 @@ jobs:
           fetch-depth: 3
       - name: Show github properties
         run: |
-          echo ${{ github.ref.refs.heads }}
+          VERSION=$(echo ${{ github.ref }} | sed -e "s#refs/heads/release/##g")
+          echo ::set-output name=version::$VERSION
 
       # Use this GitHub Action
 #      - name: Check package version
