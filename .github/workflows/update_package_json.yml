@@ -1,4 +1,7 @@
-on: push
+on:
+  push:
+    branches:
+      - 'release/**'
 name: Update package.json version
 jobs:
   checkVersion:
