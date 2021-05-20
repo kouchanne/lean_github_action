@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - 'release/**'
+      - 'test/**'
 name: create pull request
 jobs:
   checkVersion:
