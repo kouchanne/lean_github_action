@@ -27,7 +27,6 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          author: ${{ github.actor }}
           branch: ${{ steps.info.outputs.branch }}
           title: ${{ steps.info.outputs.version }}
           body: |
