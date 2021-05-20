@@ -27,7 +27,6 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ steps.info.outputs.branch }}
           title: ${{ steps.info.outputs.version }}
           body: |
             version: ${{ steps.info.outputs.version }}
